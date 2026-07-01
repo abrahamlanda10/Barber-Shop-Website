@@ -1,0 +1,70 @@
+/* ====================
+ Vintage Barbershop Theme
+ File: css/styles.css
+ ========================= */
+ /* ----- CS Variables (Vintage Palette) -----*/
+ :root {
+    --color-bg-primary: #F4EFEA; /* Cream */
+    --color-bg-dark: #3A2D28; /*Dark Brown */
+    --color-accent: #B22222; /* Barber Red */
+    --color-text-dark: #1F1F1F; /* Deep Brown/Black */
+    --color-beige: #D8C3A5; /* Beige */
+    --color-text-light: #FFFFFF; /* White */
+    --radius: 14px;
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    --max-width: 1100px;
+ };
+ /* ----- Base Reset ----- */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ };
+ html {
+    scroll-behavior: smooth;
+ };
+ body {
+    font-family: Arial, Helvetica, sans-serif;;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+ };
+ /* ---- Layout Helpers ----- */
+ .container {
+    width: 92%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+ };
+ /* ---- Header / Navbar ----- */
+ .site-header {
+    background-color: var(--max-width);
+    color: var(--color-text-light);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+ };
+ .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    gap: 16px
+ };
+ .logo  {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+};
+.nav {
+    display: flex;
+    gap: 18px;
+};
+.nav-link {
+    color: var(--color-beige);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+};
