@@ -27,7 +27,7 @@ const toggleMobileMenu = () => {
         mobileMenu.classList .add("is-open");
         isMenuOpen =true;
     } else {
-        mobileMenu.classList.remove{"is-open"};
+        mobileMenu.classList.remove("is-open");
         isMenuOpen = false;
     }
 };

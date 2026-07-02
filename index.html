@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage Barbershop</title>
     <!-- CSS -->
-     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
@@ -21,9 +22,11 @@
                 <a href="#cta" class="nav-link">Book</a>
                 <a href="#footer" class="nav-link">Contact</a>
             </nav>
+            
             <!-- Mobile Menu Button (for later JS) -->
             <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
         </div>
+
         <!-- Mobile Menu Panel (for later JS) -->
         <div class="mobile-menu" id="mobileMenu">
             <a href="#features" class="mobile-link">Services</a>
@@ -31,8 +34,9 @@
             <a href="#footer" class="mobile-link">Contact</a>
         </div>
     </header>
+
     <!-- Hero Section -->
-     <section class="hero" id="hero">
+    <section class="hero" id="hero">
         <div class="container hero-inner">
             <div class="hero-text">
                 <h1 id="heroHeading">Classic Cuts. Clean Shaves. Vintage Style.</h1>
@@ -41,68 +45,61 @@
                     straight-razor shaves, and a welcoming atmosphere.
                 </p>
                 <div id="hero-actions">
-                    <a href="#cta" class="btn btn-primary" id="servicesBtn">
+                    <a href="#cta" class="btn btn-primary" id="bookBtn">
+                        Book an appointment</a>
+
+                    <a href="#features" class="btn btn-secondary" id="servicesBtn">
                         View Services</a>
                 </div>
-            </div>
+               </div>
+            
             <div class="hero-media">
+
                 <!-- Replace src with your provided hero image -->
-                 <img 
-                   src="assets/images/hero.jpg" 
-                   alt="Barbershop hero"
-                   class="hero-img"
-                   id="heroImg"
-                 />
+                <img src="assets/images/hero.jpg" alt="Barbershop hero" class="hero-img" id="heroImg" />
             </div>
         </div>
-     </section>
-     <!-- Features / Services -->
-      <section class="features" id="features">
+    </section>
+
+    <!-- Features / Services -->
+    <section class="features" id="features">
         <div class="container">
             <h2 class="section-title" id="featuresTitle">Services</h2>
             <p class="section-subtitle" id="featuresSubtitle">
                 Quality grooming services designed for comfort,style, and confidence.
             </p>
             <div class="feature-grid" id="featureGrid">
+
                 <!-- Feature Card 1 -->
-                 <article class="feature-card">
-                    <img 
-                      src="assets/images/feature-1.jpg" 
-                      alt="Classic Haircut"
-                      class="feature-img"
-                    />
+                <article class="feature-card">
+                    <img src="assets/images/feature-1.jpg" alt="Classic Haircut" class="feature-img" />
                     <h3 class="feature-title">Classic Haircut</h3>
                     <p class="feature-text">
                         Timeless cuts with modern precision-tailored to your style.
                     </p>
-                 </article>
-                 <!-- Feature Card 2 -->
-                  <article class="feature-card">
-                    <img 
-                      src="assets/images/feature-2.jpg" 
-                      alt="Beard trim"
-                      class="feature-img"
-                      />
-                      <h3 class="feature-title">Beard Trim</h3>
-                      <p class="feature-text">
+                </article>
+
+                <!-- Feature Card 2 -->
+                <article class="feature-card">
+                    <img src="assets/images/feature-2.jpg" alt="Beard trim" class="feature-img" />
+                    <h3 class="feature-title">Beard Trim</h3>
+                    <p class="feature-text">
                         Shape, line-up, and refine your beard for a clean finishs.
-                      </p>
-                  </article>
-                  <!-- Feature Card 3 -->
-                   <article class="feature-card">
-                    <img 
-                      src="assets/images/feature-3.jpg" 
-                      alt="Straight razor shave"
-                      class="feature-img"
-                      />
-                      <h3 class="feature-title">Straight Razor Shave</h3>
-                      <p class="feature-text">
+                    </p>
+                </article>
+
+                <!-- Feature Card 3 -->
+                <article class="feature-card">
+                    <img src="assets/images/feature-3.jpg" alt="Straight razor shave" class="feature-img" />
+                    <h3 class="feature-title">Straight Razor Shave</h3>
+                    <p class="feature-text">
                         Hot Towel, smooth shave, and classic barbershop experience.
-                      </p>
-                   </article>
+                    </p>
+                </article>
             </div>
         </div>
       </section>
+
       <!-- Call to Action Section -->
        <section class="cta" id="cta">
         <div class="container cta-inner">
@@ -119,6 +116,7 @@
             </div>
         </div>
        </section>
+
        <!-- Foooter Section -->
         <footer class="site-footer" id="footer">
             <div class="container footer-inner">
@@ -158,7 +156,8 @@
                 </p>
             </div>
         </footer>
+       
         <!-- JS -->
-         <script src="js/main.js"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>
