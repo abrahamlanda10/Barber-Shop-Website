@@ -10,7 +10,7 @@ const mobileMenu = document.getElementById("mobileMenu");
 const ctaBtn = document.getElementById("ctaBtn");
 const callBtn = document.getElementById("callBtn");
 const phoneLink = document.getElementById("phoneLink");
-const heading = document.getElementById("heading");
+const heading = document.getElementById("heroHeading");
 
 // ----- Helpers / Functions -----
 // Update footer year automatically
@@ -70,11 +70,11 @@ if (mobileMenu) {
 // 4) CTA Button: "Book Now" (placeholder behavior)
 if (ctaBtn) {
     ctaBtn.addEventListener("click", () => {
-        updateHeadingText("Booking coming next - great choice!");
+        updateHeadingText("Booking coming next - Great Choice!");
     });
-}
+};
 
-// 5) Call Button: try to use thr phone number
+// 5) Call Button: try to use the phone number
 if (callBtn) {
     callBtn.addEventListener("click", () => {
         // If you later set phoneLink href to tel:, this will work perfectly.
@@ -82,7 +82,7 @@ if (callBtn) {
         if (phoneLink) {
             updateHeadingText("Call us at " + phoneLink.textContent);
         } else {
-            updateHeadingText("Call feature coming next!");
-        }
+            updateHeadingText("Call feature Coming Soon!");
+        };
     });
-}
+};
