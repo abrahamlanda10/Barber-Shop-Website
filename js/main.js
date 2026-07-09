@@ -3,7 +3,6 @@
 // Vintage Barbershop Project
 // ==========================
 // ----- DOM Elements -----
-
 const yearEl = document.getElementById("year");
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -14,32 +13,141 @@ const heading = document.getElementById("heroHeading");
 const featureGrid = document.getElementById("featureGrid");
 const nav = document.getElementById("nav");
 const siteHeader = document.querySelector(".site-header");
+
+// ----- Modal Elements -----
+const serviceModal = document.getElementById("serviceModal");
+const serviceModalOverlay = document.getElementById("serviceModalOverlay");
+const serviceModalClose = document.getElementById("serviceModalClose");
+const serviceModalTitle = document.getElementById("serviceModalTitle");
+const serviceModalPrice = document.getElementById("serviceModalPrice");
+const serviceModalList = document.getElementById("sserviceModalList");
+
 // ----- Service Data (Array of Objects) -----
-
-const services = [
+ const services = [
     {
+        id: 1,
         title: "Classic Haircut",
-        text: "Timeless cuts with modern precision tailored to your side.",
-        image: "assets/images/feature-1.jpg"
+        image: "assets/images/feature-1.jpg",
+        alt: "Classic haurcust",
+        descriptio: "Timeless cust with modern precision-tailored to your style",
+        price: 25,
+        popular: true,
+        details: [
+            "Consultation with your barber before the cut begings",
+            "Hair sectioning and shape-up based on your preferred style",
+            "Professional clippers, trimmers, and shears used for precision",
+            "Neckline cleanup and finishing touches included",
+            "Light styling product applied for a clean final look.",
+        ],
     },
     {
+        id: 2,
         title: "Beard Trim",
-        text: "Shape and line-up your beard for a clean, sharp finish",
-        image: "assets/images/feature-2.jpg"
+        image: "assets/images/feature-4.jpg",
+        alt: "Beard Trim",
+        description: "Shape, line-up, and refine your beard for a clean finish.",
+        price: 15,
+        popular: false,
+        details: [
+            "Beard assessments and shaping based on face structure.",
+            "Line-up around cheeks, jawline, and neckline.",
+            "Trimmers and detail tools used for crisp edges.",
+            "Conditioning beard product may be applied for softness.",
+            "Final symmetry check for a polished finish.",
+        ],
     },
     {
-        title: "Straight Razor Shave",
-        text: "Hot towel treatment with a smooth traditional shave.",
-        image: "assets/images/feature-3.jpg"
-    }
-];
 
-const navLinks = [
-    {label:"Home", href:"#hero"},
-    {label: "Services", href: "#features"},
-    {label: "Book", href: "#cta"},
-    {label: "Contact", href: "#footer"}
-];
+        id: 3,
+        title: "Straight Razor Shave",
+        image: "assets/images/feature-3.jpg",
+        alt: "Straight razor shave",
+        description: "Hot towel, smooth shave, and classic barbershop expirience.",
+        price: 30,
+        popular: true,
+        details: [
+            "Hot towel prep to soften facial hair and open pores.",
+            "Premium shaving cream or lather applied to protect the skin.",
+            "Straight razor shave performed with careful detailing.",
+            "Second hot towel may be used for comfort and cleanup.",
+            "Aftershave or soothing skin product applied after service.",
+        ],
+    },
+    {
+        id: 4,
+        title: "Fade & Style",
+        image: "assets/images/feature-2,jpg",
+        alt: "Fade haircut",
+        description: "A clean fade with finishing detail for a sharp, modern look",
+        price: 35,
+        popular: false,
+        details: [
+            "Style consultation before clipper work begins.",
+            "Fade blended toyour preferred level and finish.",
+            "Detailing around temples, neckline, and beard area if needed.",
+            "Scissors and clippers-over-comb may be used for texture.",
+            "Styling product added to complete the finel look.",
+        ],
+    },
+    {
+        id: 5,
+        title: "Kids Cut",
+        image: "assets/images/feature-1.jpg",
+        alt: "Kids haircut",
+        description: "Clean, comfortable haircut service for youger clients.",
+        price: 20,
+        popular: false,
+        details: [
+            "Simple consultation with child and parent if needed.",
+            "Age-appropriate haircut with comfort in mind.",
+            "Careful clipper and scissor wor for a clean finish.",
+            "Light cleanup around the neckline and ears.",
+            "Styled neatly before leaving the chair.",
+        ],
+    },
+    {
+        id: 6,
+        tile: "Head Shave",
+        image: "assets/images/feature-3.jpg",
+        alt: "Head Shave",
+        description: "Smooth head shave with classic barbershop treatment.",
+        price: 28,
+        popular: true,
+        details: [
+            "Scalp prep with warm towel treatment.",
+            "Protective shave product applied before razor work.",
+            "Close shave performed for a smooth finish.",
+            "Scalp cleaned and checked for even consistency.",
+            "Moisturing scalp product applied after the shave.",
+        ],
+    },
+ ];
+
+
+// const services = [
+//     {
+//         title: "Classic Haircut",
+//         text: "Timeless cuts with modern precision tailored to your side.",
+//         image: "assets/images/feature-1.jpg"
+//     },
+//     {
+//         title: "Beard Trim",
+//         text: "Shape and line-up your beard for a clean, sharp finish",
+//         image: "assets/images/feature-2.jpg"
+//     },
+//     {
+//         title: "Straight Razor Shave",
+//         text: "Hot towel treatment with a smooth traditional shave.",
+//         image: "assets/images/feature-3.jpg"
+//     }
+// ];
+
+// const navLinks = [
+//     {label:"Home", href:"#hero"},
+//     {label: "Services", href: "#features"},
+//     {label: "Book", href: "#cta"},
+//     {label: "Contact", href: "#footer"}
+// ];
 
 // ----- Render Navigation Using map() -----
 const renderNavigation = () => {
